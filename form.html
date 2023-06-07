@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/b-and-w-shortcut-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/new_form.css" rel="stylesheet" type="text/css">
+    <title>New Form</title>
+</head>
+
+<body>
+    <div id="regcontent" ><!--style="display:none"-->
+
+        <div id="pictureContainer" class="reg-form-hero">
+            <h1 class="reg-form-hero-header">Register now!</h1>
+        </div>
+    
+        <!-- Andrew, can we delete this span? <span class="bg-danger" id="message" style="padding:5px; padding-left:10px; padding-right:10px; display:none"></span> -->
+    
+        <form id="registration_form" class="form-horizontal" method="post" action="/register.php" id="frm" class="formlayout">
+    
+            <div class="container">
+        
+                <!-- Personal Info Section -->
+                <div class="personal-info form-div"> <!-- The catergorically named classes are just here to organize the form by catergory in the HTML - if I call these catergory divs in the CSS i will leave a note. -->
+
+                    <h3 class="reg-form-first-header">Personal Info</h3>
+                    <div class="bottom-line"></div>
+            
+                    <input type="hidden" name="backdoor" value="true"/>
+                    
+                    <div class="double-input">
+                        <div class="form-group">
+                            <label for="firstname" class="col-md-2 control-label">First name:</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" name="firstname" id="firstname" class="form-control" required/>
+                            </div>
+                        </div>
+            
+                        <div class="form-group" style="display:none">
+                            <label class="col-md-2 control-label">For robotic computers. If you can see this, leave this field blank:</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" name="name" id="name" />
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="lastname" class="col-md-2 control-label">Last name:</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" required name="lastname" id="lastname" />
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="church" class="col-md-2 control-label">Church:</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" required name="church" id="church"  />
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="denomination" class="col-md-2 control-label  form-group-sm">I am a baptized or professing member of:</label>
+                        <div class="col-md-4">
+                            <select name="denomination" class="form-control" required id="denomination" >
+                                <option value="">Select...</option>
+                                <option>United Reformed Church</option>
+                                <option>Canadian Reformed Church</option>
+                                <option>Free Reformed Church</option>
+                                <option>Christian Reformed Church</option>
+                                <option>Associate Reformed Presbyterian</option>
+                                <option>Orthodox Presbyterian Church</option>
+                                <option>Presbyterian Church of America</option>
+                                <option>Heritage Reformed Church</option>
+                                <option>None/Other</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="gender" class="col-md-2 control-label">Gender:</label>
+                        <div class="col-md-4">
+                            <select name="gender" class="form-control" required id="gender">
+                                <option value="">Select...</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+
+                        <label for="dob_month" class="col-md-2 control-label">Birth Date:</label>
+
+                        <div class="birth-flex">
+                            <select name="dob_month" id="dob_month" class="form-control birth-flex-item" required>
+                                <option value="">Month</option>
+                                <option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
+                            </select>
+        
+                            <select name="dob_day" id="dob_day" class="form-control birth-flex-item" required>
+                                <option value="">Day</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                            </select>
+        
+                            <select name="dob_year" id="dob_year" class="form-control birth-flex-item" required>
+                                <option value="">Year</option>
+                                <option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email" class="col-md-2 control-label">Email Address:</label>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" required name="email" id="email"/>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone" class="col-md-2 control-label">Phone Number:</label>
+                        <div class="col-md-4">
+                            <input type="tel" class="form-control" name="phone" id="phone" required  title="xxx-xxx-xxxx"/>
+                        </div>
+                    </div>
+            
+                    <div class="checkbox-container">
+                        <div>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="lifeguard" id="lifeguard" value="1">I am NLS certified, and may be willing to be a lifeguard at camp.
+                            </label>
+                        </div>
+            
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="first_aid" id="first_aid" value="1">I am certified in First Aid.
+                            </label>
+                        </div>
+            
+                    </div>
+
+                </div>
+
+        
+                <!-- Mailing Address Section-->
+                <div class="mailing-adress form-div">
+
+                    <h3 class="form-section-header">Mailing Address</h3>
+                    <div class="bottom-line"></div>
+            
+                    <div class="form-group">
+                        <label for="street" class="col-md-2 control-label">House Number &amp; Street:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="street" id="street" class=""/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="city" class="col-md-2 control-label">City:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="city" id="city"/></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="province" class="col-md-2 control-label">Province/State:</label>
+                        <div class="col-md-4"><select name="province" id="province" class="form-control" required><option value="">Select...</option><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option><option> ---------------- </option><option value="AL">Alabama</option> <option value="AK">Alaska</option> <option value="AZ">Arizona</option> <option value="AR">Arkansas</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DE">Delaware</option> <option value="DC">District Of Columbia</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="HI">Hawaii</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="IA">Iowa</option> <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="ME">Maine</option> <option value="MD">Maryland</option> <option value="MA">Massachusetts</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option> <option value="MS">Mississippi</option> <option value="MO">Missouri</option> <option value="MT">Montana</option> <option value="NE">Nebraska</option> <option value="NV">Nevada</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option> <option value="NY">New York</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option> <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VT">Vermont</option> <option value="VA">Virginia</option> <option value="WA">Washington</option> <option value="WV">West Virginia</option> <option value="WI">Wisconsin</option> <option value="WY">Wyoming</option></select></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="postal" class="col-md-2 control-label">Postal Code:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="postal" id="postal" /></div>
+                    </div>
+        
+                </div>
+        
+                <!-- Emergency Contacts -->
+                <div class="emergency-contacts form-div">
+
+                    <h3 class="form-section-header">Emergency Contacts</h3>
+                    <div class="bottom-line"></div>
+            
+                    <div class="form-group">
+                        <label for="contact1_name" class="col-md-2 control-label">Contact 1 Name:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="contact1_name" id="contact1_name"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact1_relationship" class="col-md-2 control-label">Relationship to you:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="contact1_relationship" id="contact1_relationship"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact1_dayphone" class="col-md-2 control-label">Daytime Phone #:</label>
+                        <div class="col-md-4"><input type="tel" class="form-control" required  name="contact1_dayphone" id="contact1_dayphone" title="xxx-xxx-xxxx"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact1_nightphone" class="col-md-2 control-label">Nighttime Phone #:</label>
+                        <div class="col-md-4"><input type="tel" class="form-control" required  name="contact1_nightphone" id="contact1_nightphone" title="xxx-xxx-xxxx"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact2_name" class="col-md-2 control-label">Contact 2 Name:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="contact2_name" id="contact2_name"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact2_relationship" class="col-md-2 control-label">Relationship to you:</label>
+                        <div class="col-md-4"><input type="text" class="form-control" required name="contact2_relationship" id="contact2_relationship"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact2_dayphone" class="col-md-2 control-label">Daytime Phone #:</label>
+                        <div class="col-md-4"><input type="tel" class="form-control" required   name="contact2_dayphone" id="contact2_dayphone" title="xxx-xxx-xxxx"/></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="contact2_nightphone" class="col-md-2 control-label">Nighttime Phone #:</label>
+                        <div class="col-md-4"><input type="tl" class="form-control" required  name="contact2_nightphone" id="contact2_nightphone" title="xxx-xxx-xxxx"/></div>
+                    </div>
+
+                </div>
+
+
+                <!-- Medical Information Section -->
+                <div class="medical-information form-div">
+
+                    <h3 class="form-section-header">Medical Information</h3>
+                    <div class="bottom-line"></div>
+    
+                    <h6 class="form-instructions">We collect this information in order to ensure your safety while at camp - in case of emergency or for things like food preparation. It is your responsibility to ensure that the information you provide is accurate and up-to-date.  This information is collected in a manner that corresponds with our Privacy Policy - which, in part, promises that once camp is over, we will erase your medical information.</h6>
+                
+                    <div class="form-group">
+                        <label for="healthcard" class="col-md-2 control-label">Health Card #:</label>
+                        <div class="col-md-4"><input type="text" class="form-control medicalInfo" name="healthcard" id="healthcard" required /></div>
+                    </div>
+            
+                    <h6 class="health-margin form-instructions">Do you have any health issues that might prevent you from taking part in any of the activities at camp? Any known allergies? Any prescription medications we need to be aware of?</h6>
+                    
+                    <div class="col-md-6"><textarea name="medical" id="medical" class="medicalInfo form-control" placeholder="Enter your answer here..." rows="5" cols="40" required ></textarea></div>
+    
+                </div>
+        
+                <!-- American Campers -->
+                <div class="american-campers form-div">
+                    <h3 class="form-section-header">American Campers</h3>
+                    <div class="bottom-line"></div>
+            
+                    <div class="form-group">
+                        <label for="insurance_carrier" class="col-md-2 control-label">Insurance Carrier:</label>
+                        <div class="col-md-4"><input type="text" class="form-control medicalInfo" name="insurance_carrier" id="insurance_carrier" /></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="firstname" class="col-md-2 control-label">Policy Number:</label>
+                        <div class="col-md-4"><input type="text" class="form-control medicalInfo" name="policy_number" id="policy_number"/></div>
+                    </div>
+                </div>
+                
+                <!-- Workshop Selection -->
+                <div class="workshop-selection form-div">
+                    <h3 class="form-section-header">Workshop Selection</h3>
+                    <div class="bottom-line"></div>
+    
+                    <div class="form-group">
+                        <label for="workshop1">Workshop 1</label>
+                        <select id="workshop1" type="text" name="workshop1" class="form-control">
+                            <option value="0">Pick for me / pick later!</option>
+                            <option class="audience_Mixed" value="223"></option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workshop2">Workshop 2</label>
+                        <select id="workshop2" type="text" name="workshop2" class="form-control">
+                            <option value="0">Pick for me / pick later!</option>
+                            <option class="audience_Mixed" value="223"></option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="workshop_alt">Alternate Workshop</label>
+                        <select id="workshop_alt" type="text" name="workshop_alt" class="form-control">
+                            <option value="0">Pick for me / pick later!</option>
+                            <option class="audience_Mixed" value="223"></option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <h6 class="form-instructions">Please note that you will be able to change your choices up to three weeks in advance of camp. A link will be available on the main page. Also, due to size limitations, sometimes you won't get in the workshops you signed up for.</h6>
+                    </div>
+
+                </div>
+
+                <!-- Verification -->
+                <div class="verification form-div">
+                    <h3 class="form-section-header">Verification</h3>
+                    <div class="bottom-line"></div>
+                
+                    <div class="form-group">
+                        <label for="reenter" class="col-md-2 control-label">Re-enter Email Address:</label>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" required name="reenter" id="reenter" />
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-md-4">
+                            <button id="registerButton" class="btn btn-success btn-lg with-hover-button">Register!!!</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div> <!--Closes div class="container form-div"-->
+        </form>
+    </div>   <!--Closes div id="reg-content"--> 
+</body>
+
+<!--
+<div id="registrationModal" class="modal fade" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Why do we ask what type church you belong to?</h4>
+    </div>
+    <div class="modal-body">
+        <p>Camp Tamarack is a Reformed conference for unmarried young people. You must be at least 16 on or before December 31st, 2023 (if you were born on January 1, 2008 or later, you can't come this year!)</p>
+        <p>When accepting registrations, priority will be given to baptized or professing members of the following denominations:</p>
+        <ul>
+            <li>United Reformed Church</li>
+            <li>Canadian Reformed Church</li>
+            <li>Free Reformed Church</li>
+            <li>Christian Reformed Church</li>
+            <li>Associate Reformed Presbyterian</li>
+            <li>Orthodox Presbyterian Church</li>
+            <li>Presbyterian Church of America</li>
+            <li>Heritage Reformed Church</li>
+        </ul>
+        <p>If you are from a different church, we will evaluate your registration and you may be subject to a waiting period of up to two weeks</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="with-hover-button" data-dismiss="modal">Close</button>
+    </div>
+    </div>--><!-- /.modal-content
+</div> /.modal-dialog 
+</div>/.modal -->

@@ -1,0 +1,18 @@
+Last Adjustments to registration Form Log
+
+Added 
+X-overflow: hidden; to body declarations in style.css
+
+Added Media Query
+
+@media screen and (max-width: 59.6em) {
+    .double-input {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+I really changed around the workshop section... I should probably just copy and paste it into the existing file.
+
+I moved the code for Brad's Modal Div down to the bottom of the file

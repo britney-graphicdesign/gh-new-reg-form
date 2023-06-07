@@ -1,0 +1,1102 @@
+/* Font Import */
+/* Both Inter and Rokkitt are being imported with this link */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Rokkitt:wght@200;300;400&display=swap');
+
+/* Document Variables */
+:root {
+    --container-width: 62em;
+    /* Once I put in my font sizes I might need to change this */
+    --inner-container-width: 42em;
+    --blue: #2D9CDB;
+    --transparent-blue: #015789aa;
+    /* Used for Gallery on Home Page */
+    --transparent-black: #00000050;
+    /* Used on Media Page */
+    --less-transparent-black: #00000094;
+}
+
+/* Site-Wide Declarations */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #000000;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Type Scale - i will finish this note 
+h1 is 7em / 112pt
+h2
+h3 is 4em / 64pt
+h4
+h5
+h6
+
+p
+
+buttons
+
+*/
+
+h1 {
+    /* Used only for the hero image on the home page, and the Regitration Page header (though modified for reg. page) */
+    text-transform: uppercase;
+    font-size: 7em;
+    font-weight: 400;
+    text-align: center;
+    /* this is necessary for responsivity */
+}
+
+/* The H2 declarations can be found in the "Infinite Marquee" Section of the CSS */
+
+h3 {
+    /* Used for Section Headings */
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+h4 {
+    /* Used for LARGE WHITE TEXT, like the camp dates, and Page headers for the Privacy and Media Pages. */
+    color: white;
+    text-transform: uppercase;
+    font-size: 5em;
+    text-align: center;
+}
+
+h5 {
+    /* Used Theme Verse Text in Theme Section, Speaker's Names in Speaker Section, and the Overlays in the Activities grid. - This is small, Inter, White, All Caps Text. */
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 1.8em;
+    text-align: left;
+    font-weight: 300;
+}
+
+h6 {
+    /* Used in Footer for Links, White, Sentence/Title Case, Inter  */
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-align: center;
+    font-weight: 300;
+}
+
+p {
+    color: white;
+    font-family: 'Rokkitt';
+    font-weight: 200;
+    font-size: 1.2em;
+    /* This is equal to 20 pixels */
+    line-height: 1.4em;
+}
+
+/* Alternate Paragraph Styles */
+
+/* Add notes for where each of these are used. */
+
+.light-inter-para {
+    text-align: center;
+    font-family: 'Inter', 'Rokkitt';
+    font-weight: 100;
+}
+
+.gray-para {
+    /* Used in Speaker Section on Home Page */
+    color: rgb(178, 178, 178);
+}
+
+.vertical-para {
+    writing-mode: vertical-rl;
+    /* Sets the vertical writing mode */
+    text-align: center;
+}
+
+.large-para {
+    /* Used in Dates Section on the Home Page */
+    font-size: 1.6em;
+}
+
+a {
+    color: #fff;
+}
+
+li {
+	color: white;
+    font-family: 'Rokkitt';
+    font-weight: 200;
+    font-size: 1.2em;
+    /* This is equal to 20 pixels */
+    line-height: 1.4em;
+}
+
+/* Regular Buttons */
+
+.with-hover-button {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: inset 1px 4px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 50px;
+}
+
+.with-hover-button:hover {
+    color: var(--blue);
+    background-color: #fff;
+}
+
+/* No Hover Buttons */
+
+.no-hover-button {
+    color: #ffffff;
+    font-family: 'Inter';
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: inset 1px 4px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: 15px 30px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 50px;
+}
+
+/* Section Heading Lines */
+
+.top-line {
+    border-top: 1px solid #ffffff;
+    width: 220px;
+    height: 1px;
+    margin-top: 12em;
+    margin-bottom: 5em;
+}
+
+.bottom-line {
+    border-top: 1px solid #ffffff;
+    width: 500px;
+    height: 1px;
+    margin: 1em auto 3em auto;
+}
+
+/* Full Line - The line used in Pricing Flex on the Registration Page */
+
+.full-line {
+    border-top: 1px solid #ffffff;
+    height: 1px;
+    margin: 2em 0 2em 0;
+}
+
+/* Content Container */
+.container {
+    max-width: var(--container-width);
+    margin: auto;
+}
+
+.inner-container {
+    max-width: var(--inner-container-width);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container-with-bullet-points {
+    /* Used on Privacy Page */
+    align-items: flex-start;
+}
+
+.bullet {
+    margin-left: 2em;
+}
+
+/* Header Nav Bar */
+
+.nav {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    min-height: 3em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-ul {
+    list-style-type: none;
+    /* get rid of the bullet points */
+    display: flex;
+    /*puts the list items besude each other */
+}
+
+.nav-links-ul-li {
+    margin-right: 2.5em;
+}
+
+.nav-links-ul-li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    /* get rid of the underlines */
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+.nav-links-ul-li a:hover {
+    border-bottom: 1px solid var(--blue);
+    padding-bottom: 3px;
+    color: var(--blue);
+    /* link changes colors when hovered */
+    /* Animation code */
+    animation: hovernav 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes hovernav {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2em;
+    /* this controls the size of the hamburger menu */
+    text-align: right;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 4em;
+    border-top: 1px solid white;
+    padding: 2em;
+}
+
+.footer-social {
+    width: 7em;
+    min-height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social img {
+    width: 3em;
+    object-fit: cover;
+    display: flex;
+}
+
+.footer-navigation {
+    max-width: var(--container-width);
+    margin: 1.5em auto 1em auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-navigation a {
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.footer-navigation h6:hover {
+    color: var(--blue);
+}
+
+.footer-navigation-spacers {
+    margin: 0 1em 0 1em;
+}
+
+.footer-credit {
+    color: rgb(149, 149, 149);
+    text-align: center;
+    font-size: 1em;
+    /* This is equal to 20 pixels */
+    letter-spacing: 0.2px;
+}
+
+/* THIS IS WHERE THE CODE SPECIFIC TO THE HOME PAGE BEGINS */
+
+/* HERO SECTION */
+.hero {
+    min-height: 42em;
+    background-image: url(../img/hero-regular.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo img {
+    height: 60px;
+    margin-bottom: 2em;
+}
+
+.hero-p {
+    color: #000;
+    font-weight: 400;
+    font-size: 1.6em;
+}
+
+.hero-social img {
+    width: 50px;
+    margin: -3em 0.3em;
+}
+
+/* The infinite marquee */
+
+.marquee {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 1em;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    white-space: nowrap;
+    animation: move-rt1 16000ms linear infinite;
+    padding: 0 0.2em;
+}
+
+@keyframes move-rt1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* The ABOUT CAMP TAMARACK Section */
+
+.go-to-reg-button {
+    margin-top: 2em;
+}
+
+/* Save The Dates Section - this is also on the registration page. */
+
+.dates-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dates-tree {
+    max-width: 30vw;
+    margin: 2em;
+}
+
+.closing {
+    margin-top: 2em;
+}
+
+/* the class "large-para" is use to enlarge some of the body text - which you can find in the text style portion of the CSS  */
+
+/* Speakers Section */
+
+.speakers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.speakers-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speakers-profile img {
+    margin: 1.5em 0 2em 0;
+    max-width: 16em;
+}
+
+.speakers-profile h5 {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+}
+
+/* Theme Section */
+
+.theme {
+    height: 44em;
+    background-image: url(../img/theme-section/pexels-kseniya-budko-14733534.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000;
+    position: static;
+}
+
+.theme-verse {
+    background-color: rgb(0, 0, 0);
+    width: 37.7em;
+    /* Adjust this number to control the size of the box that the verse sits inside. Each year when the verse is different, you will probably need to adjust this. */
+    padding: 2.8em;
+    position: relative;
+    top: 120px;
+    left: 30px;
+}
+
+.theme-verse-outline {
+    border: 1px solid #fff;
+    width: 100%;
+    padding: 2.8em;
+}
+
+.theme-verse-reference {
+    margin-top: 1em;
+}
+
+/* The theme verse is written in h5 */
+
+.theme-graphic {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -100px;
+    right: 10px;
+}
+
+.theme-graphic img {
+    width: 36em;
+}
+
+/* Activity Gallery */
+
+.top-line-activities {
+    margin-top: 16em;
+}
+
+.bottom-line-activities {
+    margin-bottom: 6em;
+}
+
+.activities {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4em;
+    margin-bottom: 4em;
+}
+
+.image {
+    position: relative;
+}
+
+.image__img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(0.5px);
+}
+
+.image__overlay--primary {
+    background: var(--transparent-blue);
+}
+
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+.image__overlay h5 {
+    text-align: center;
+}
+
+/* Hoodie Section */
+
+.hoodie-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hoodie-img {
+    max-height: 60em;
+    max-width: 90%;
+    margin: auto;
+    object-fit: cover;
+    display: flex;
+}
+
+.hoodie-button {
+    /* I had this code so I could put the button over top and to the side of the hoodie image with relative positioning - but I want it centered and underneath the image on the tablet and mobile version. When I change the position property in the media query, is it overwriting the original command. I don't have time to fix this so I am leaving the button staticly centered for now. 
+    position: relative;
+    bottom: 30vh;
+    left: 53vw; */
+    font-size: 1.6em;
+}
+
+/* Location Section */
+
+.location-top-line {
+    margin-top: 4em;
+}
+
+.location {
+    text-align: center;
+}
+
+.address {
+    font-size: 1.6em;
+    letter-spacing: 1px;
+}
+
+.location-visuals {
+    position: relative;
+    width: 100%;
+}
+
+.map {
+    max-width: 98%;
+    margin: 2em auto 0 auto;
+    object-fit: cover;
+    display: flex;
+}
+
+.maps-button {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-5%, -40%);
+    -ms-transform: translate(-5%, -40%);
+}
+
+.location h5 {
+    text-align: center;
+    margin: 3em auto 0.5em auto;
+}
+
+/* THIS IS WHERE THE CODE SPECIFIC TO THE REGISTRATION PAGE BEGINS */
+
+/* REGISTRATION HERO SECTION */
+
+.reg-hero {
+    min-height: 42em;
+    background-image: url(../img/registration-page/misty-waterfront-figma-export.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-hero-content-logo img {
+    height: 60px;
+    margin-bottom: 2em;
+}
+
+.reg-hero-content-header {
+    color: #fff;
+    font-size: 7.5em;
+}
+
+.reg-hero-content-p {
+    color: #ffffff;
+    font-size: 1.6em;
+    text-align: left;
+}
+
+/* The Small Paragraphs Section */
+
+.small-paragraphs {
+    margin-top: 8em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.small-paragraphs-top-line {
+    border-top: 1px solid #ffffff;
+    width: 200px;
+    height: 1px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* The Giant REGISTER NOW button  */
+
+.div-reg-now-button {
+    display: flex;
+    justify-content: center;
+    margin: 6em auto 6em auto;
+}
+
+.reg-now-button {
+    font-size: 3em;
+    box-shadow: inset 8px 8px 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 30px 60px;
+    border-radius: 100px;
+    margin: auto;
+}
+
+.status-button-div {
+     display: flex;
+    justify-content: center;
+    margin: 2em auto 0em auto;
+}    
+
+/* Pricing Section  */
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-flex {
+    width: 90%;
+}
+
+.pricing-flex-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-flex-item p {
+    letter-spacing: 0.4px;
+}
+
+/* THIS IS THE CODE SPECIFIC TO "register.php" */
+
+.register-denial {
+    font-size: 1.6em;
+}
+
+/* THIS IS THE CODE SPECIFIC TO THE PRIVACY POLICY PAGE */
+
+.priv-header {
+    font-size: 7.6em;
+    margin: 1em auto 1em auto;
+}
+
+/* THIS IS WHERE THE CODE SPECIFIC TO THE MEDIA PAGE BEGINS */
+
+.media-header {
+    font-size: 8em;
+    margin: 1em auto 1em auto;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.media-item {
+    position: relative;
+}
+
+.media-image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background-color: var(--transparent-black);
+    transition: background-color 0.3s;
+}
+
+.media-overlay:hover {
+    background-color: var(--less-transparent-black);
+}
+
+.media-overlay h5 {
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
+    transition: font-size 0.3s;
+}
+
+.media-overlay h5:hover {
+    font-size: 2em;
+}
+
+/* MEDIA QUERIES - Used so the content of the website will respond to the size of the user's screen. (Makes content adapt for tablet and mobile screens.) */
+
+@media screen and (max-width: 48em) {
+
+    /* tablet < 48em or 768px */
+    h4 {
+        font-size: 4em;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .container {
+        max-width: 90vw;
+    }
+
+    .responsive-hide {
+        /* this makes some of the activty images and the bars in the footer links disappear */
+        display: none;
+    }
+
+    .text-heavy {
+        /* This controls the margins of the TOP LINES on the registration and privacy policy pages. */
+        margin-top: 8em;
+    }
+
+    .bottom-line {
+        margin-top: 3em;
+    }
+
+    .nav-links {
+        display: block;
+        height: 3em;
+        /* adjust this if the hamburger is cut off or the links start to show when the menu is supposed to be closed */
+        overflow: hidden;
+        margin-bottom: 0.1rem;
+    }
+
+    .nav-expanded {
+        height: auto;
+    }
+
+    .nav-links-ul {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .nav-links-ul-li {
+        padding-bottom: 2.5em;
+        margin-right: 0;
+        /* this is here to get rid of the horizontal padding that is necessary on desktop */
+    }
+
+    /* Home Page Adjustments */
+    .dates-container {
+        margin-top: 4em;
+    }
+
+    .dates-tree {
+        margin: 4em;
+    }
+
+    .speakers {
+        flex-direction: column;
+    }
+
+    .speakers-profile img {
+        margin: 6em 0 1em 0;
+        max-width: 60vw;
+    }
+
+    .theme {
+        height: 60em;
+    }
+
+    .theme-graphic {
+        justify-content: center;
+        top: 154px;
+        /* this object is positioned relatively */
+    }
+
+    .activities {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5em;
+    }
+
+    .hoodie-img {
+        max-width: 90vw;
+    }
+
+    .map {
+        width: 90vw;
+        /* this number has to be the same size as the responsive container, in order for it to stay centered and the proper size */
+    }
+    .maps-button {
+        font-size: 1em;
+        top: 88%;
+        left: 62%;
+    }
+    
+    .footer-navigation a {
+        margin: 1em 0.5em 0 0.5em;
+    }
+
+    /* REGISTRATION PAGE */
+    .reg-hero {
+        min-height: 34em;
+    }
+
+    .reg-hero-content-header {
+        font-size: 5em;
+    }
+
+    /* MEDIA ARCHIVE PAGE */
+    .media-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .media-overlay h5 {
+        font-size: 1.4em;
+    }
+
+    /* PRIVACY POLICY PAGE */
+    .priv-header {
+        font-size: 5.4em;
+    }
+}
+
+@media screen and (max-width: 30em) {
+
+    /* mobile < 480px */
+    h1 {
+        /* this is the Hero "Camp Tamarack" */
+        font-size: 3.4em;
+    }
+
+    h3 {
+        font-size: 3em;
+    }
+
+    h4 {
+        font-size: 3em;
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    .container {
+        padding: 0.5em;
+        width: 96vw;
+    }
+
+    .top-line {
+        width: 10vw;
+        margin: 6em 0 4em 0;
+    }
+
+    .bottom-line {
+        width: 40vw;
+    }
+
+    /* Responsive Nav Code - still need to do this */
+    .nav-logo img {
+        width: 7em;
+        /* MOBILE SPECIFIC */
+        position: absolute;
+        /* this prevents the button from warping if the logo takes up too much horizontal space */
+    }
+
+    .nav-links-ul-li {
+        padding-bottom: 2em;
+    }
+
+    /* Hero */
+    .hero-p {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    /* Dates Section */
+    .large-para {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    /* Speakers Section */
+    .speakers-profile img {
+        margin: 4em 0 1em 0;
+        max-width: 90vw;
+    }
+
+    .gray-para {
+        text-align: center;
+    }
+
+    /* Theme Section */
+    .theme {
+        height: 50em;
+    }
+
+    .theme-verse {
+        width: 90vw;
+        padding: 1.5em;
+        left: 0;
+        /* this puts the image back in the center */
+    }
+
+    .theme-verse-outline {
+        padding: 1.5em;
+    }
+
+    .theme-verse-outline h5 {
+        font-size: 1.1em;
+    }
+
+    .theme-graphic img {
+        width: 90vw;
+    }
+
+    /* Activities Section */
+    .bottom-line-activities {
+        margin-bottom: 3em;
+    }
+
+    .activities {
+        grid-template-columns: 1fr;
+        grid-gap: 0.8em;
+    }
+
+    .hoodie-button {
+        position: static;
+        margin-top: 2em;
+        font-size: 1.2em;
+    }
+
+    .map {
+        width: 100%;
+    }
+    
+    .maps-button {
+        font-size: 0.9em;
+        top: 120%;
+        left: 10%;
+    }
+    
+    .location h5 {
+        margin-top: 4em;
+    }
+    
+    .footer-navigation {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .footer-navigation a {
+        margin-top: 1em;
+    }
+
+    /* Registration Page */
+    .reg-hero {
+        min-height: 28em;
+    }
+
+    .reg-hero-content-header {
+        font-size: 2.5em;
+        margin-bottom: 0.2em;
+    }
+
+    .reg-hero-content-p {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .small-paragraphs {
+        grid-template-columns: 1fr;
+    }
+
+    .reg-now-button {
+        font-size: 1.6em;
+        padding: 20px 35px;
+    }
+
+    .vertical-para {
+        padding-right: 1em;
+    }
+
+    .pricing-flex-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Media Page */
+    .media-header {
+        font-size: 4em;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shrink-header {
+        font-size: 2.5em;
+    }
+
+    /* Privacy Page */
+    .priv-header {
+        font-size: 4em;
+    }
+
+    .inner-container-with-bullet-points p {
+        font-size: 1em;
+    }
+}
